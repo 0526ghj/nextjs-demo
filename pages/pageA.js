@@ -21,17 +21,18 @@ const pageA = ({ router }) => {
   )
 }
 
-pageA.getInitialProps = async () => {
-  const promise = new Promise( (resolve) => {
-    axios('请求地址').then(
-      (res) => {
-        console.log('远程数据', res)
-        resolve(res.data.data)
-      }
-     )
-  })
+// 数据请求
+// pageA.getInitialProps = async () => {
+//   const promise = new Promise( (resolve) => {
+//     axios('请求地址').then(
+//       (res) => {
+//         console.log('远程数据', res)
+//         resolve(res.data.data)
+//       }
+//      )
+//   })
 
-  return await promise
-}
+//   return await promise
+// }
 
 export default withRouter(pageA)

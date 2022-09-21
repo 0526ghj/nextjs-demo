@@ -1,6 +1,7 @@
 import react from "react";
 import Link from "next/link";
 import Router from "next/router";
+import Script from 'next/script'
 
 
 const home = () => {
@@ -13,6 +14,8 @@ const home = () => {
   })
   return (
     <div>
+      <Script src="/a.js" strategy="lazyOnload" />
+
       <div>我是首页</div>
       <div><Link href='/pageA?name=LinkA'><a>去a页面</a></Link></div>
       <div><Link href='/pageB'><a>去b页面</a></Link></div>
@@ -21,4 +24,4 @@ const home = () => {
     </div>
   )
 }
-export default home
+export default home 
