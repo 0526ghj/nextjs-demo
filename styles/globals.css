@@ -15,9 +15,7 @@ a {
   box-sizing: border-box;
 }
 
-p {
-  color: red;
-}
+
 
 @media (prefers-color-scheme: dark) {
   html {
